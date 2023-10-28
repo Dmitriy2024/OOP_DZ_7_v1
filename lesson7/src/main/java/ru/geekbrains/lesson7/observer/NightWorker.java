@@ -15,7 +15,7 @@ public class NightWorker implements  Observer{
 
     @Override
     public void receiveOffer(String nameCompany, int salary, int workingHours) {
-        if (this.salary <= salary || workingHours == 0) {
+        if (this.salary <= salary && workingHours == 0) {
             System.out.printf("NightWorker %s: Мне нужна эта работа! (компания: %s; заработная плата: %d; режим работы (1-день, 0-ночь) %s)\n",
                     name, nameCompany, salary, workingHours);
             this.salary = salary;
